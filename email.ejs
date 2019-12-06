@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+
+<body>
+    <div style="max-width:350px;margin:auto;padding:0;font-family:cursive;font-size:16px;color:#5f5e5e">
+        <div style="text-align:center;border-bottom:1px dashed;">
+            <span style="display:block;font-size:20px;margin:10px 0;"><%= todaystr %></span>
+            <img src="<%= todayOneData.imgUrl %>" style="width:100%;"  alt="">
+            <span style="color:#b0b0b0;font-size:14px;"><%= todayOneData.type %></span>
+            <div style="margin:10px auto;width:85%;"><%= todayOneData.text %></div>
+        </div>
+    
+        <div style="width:100%;margin:10px auto 0;text-align:center;border-bottom:1px dashed;">
+            <span style="display:block;font-size:20px">近期天气预报</span>
+        <% for(var j = 0; j<threeDaysData.length; j++) { %>
+            <div style="display: flex;margin-top:5px;justify-content:space-around;align-items:center;">
+                <span style=""><%= threeDaysData[j].Day %></span>
+                <div style="flex-basis:20%;">
+                    <img style="height:26px;vertical-align:middle;" src='<%= threeDaysData[j].WeatherImgUrl %>' alt="">
+                    <span style="display:inline-block"><%= threeDaysData[j].WeatherText %></span>
+                </div>
+                <span style=""><%= threeDaysData[j].Temperature %></span>
+                <% if (threeDaysData[j].PollutionLevel=='level_1') { %>
+                    <span style="color:#8fc31f;flex-basis:30%;"><%= threeDaysData[j].Pollution %></span>
+                <% }  %>
+                <% if (threeDaysData[j].PollutionLevel=='level_2') { %>
+                    <span style="color:#d7af0e;flex-basis:30%;"><%= threeDaysData[j].Pollution %></span>
+                <% }  %>
+                <% if (threeDaysData[j].PollutionLevel=='level_3') { %>
+                    <span style="color:#f39800;flex-basis:30%;"><%= threeDaysData[j].Pollution %></span>
+                <% }  %>
+                <% if (threeDaysData[j].PollutionLevel=='level_4') { %>
+                    <span style="color:#e2361a;flex-basis:30%;"><%= threeDaysData[j].Pollution %></span>
+                <% }  %>
+                <% if (threeDaysData[j].PollutionLevel=='level_5') { %>
+                    <span style="color:#5f52a0;flex-basis:30%;"><%= threeDaysData[j].Pollution %></span>
+                <% }  %>
+                <% if (threeDaysData[j].PollutionLevel=='level_6') { %>
+                    <span style="color:#631541;flex-basis:30%;"><%= threeDaysData[j].Pollution %></span>
+                <% }  %>
+            </div>
+        <% } %>
+            <span style="display:block;padding:10px;"><%= weatherTip %></span>
+        </div>
+    
+        <p style="width:100%;margin:0 auto;text-align:center;padding:10px 0;border-bottom:1px dashed;"><%= sayLove %></p>
+    
+        <div style="width:100%; margin: 40px auto;font-size:20px; ;text-align:center">
+            <span>小金猪邮件服务器运行</span>
+            <span style="font-size:24px;color:rgb(221, 73, 73)"  > <%= lastDay %> </span>
+            <span>天</span>
+        </div>
+    </div>
+</body>
+</html>
