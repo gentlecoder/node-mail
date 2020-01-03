@@ -1,18 +1,41 @@
 {
-  "name": "node-mail",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "ejs": "^3.0.1",
-    "node-schedule": "^1.2.5",
-    "nodemailer": "^6.3.1",
-    "superagent": "^5.1.2"
-  }
+	"name": "node-mail",
+	"version": "1.0.0",
+	"description": "A simple mail server powered by node. Send some message to someone regularly.",
+	"license": "MIT",
+	"repository": "gentlecoder/node-mail",
+	"author": {
+		"name": "gentlecoder",
+		"email": "gentlecoder@qq.com",
+		"url": "https://gentlecoder.cn"
+	},
+	"keywords": [
+		"nodemail-cli",
+		"nodemail",
+		"cli",
+		"mail",
+		"gf"
+	],
+	"main": "cli.js",
+	"bin": {
+		"nodemail": "cli.js"
+	},
+	"scripts": {
+		"test": "xo"
+	},
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.2",
+		"ejs": "^3.0.1",
+		"lowdb": "^1.0.0",
+		"make-dir": "^3.0.0",
+		"meow": "^6.0.0",
+		"nanoid": "^2.1.8",
+		"node-schedule": "^1.2.5",
+		"nodemailer": "^6.3.1",
+		"prompts": "^2.3.0",
+		"superagent": "^5.1.2"
+	},
+	"devDependencies": {
+		"xo": "^0.25.3"
+	}
 }

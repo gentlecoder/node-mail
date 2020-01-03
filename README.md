@@ -19,7 +19,13 @@ npm install
 ## Usage
 
 ```sh
-node main.js
+npm link && nodemail -c
+```
+
+or
+
+```sh
+node cli -c
 ```
 
 ## Run tests
@@ -32,16 +38,17 @@ npm run test
 
 👤 **gentlecoder**
 
-* Website: gentlecoder.cn
-* Github: [@gentlecoder](https://github.com/gentlecoder)
+- Website: gentlecoder.cn
+- Github: [@gentlecoder](https://github.com/gentlecoder)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/gentlecoder/node-mail/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/gentlecoder/node-mail/issues).
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
